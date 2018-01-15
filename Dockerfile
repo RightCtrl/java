@@ -1,17 +1,10 @@
 FROM rightctrl/centos
-MAINTAINER RightCtrl <AI@RightCtrl.com>
+MAINTAINER RightCtrl <support@RightCtrl.com>
 
 # Install prepare infrastructure
-RUN yum -y update && \
-        yum -y install wget && \
-        yum -y install tar install gcc gcc-c++ make flex bison gperf ruby \
+RUN yum -y install wget tar install gcc gcc-c++ make flex bison gperf ruby \
         openssl-devel freetype-devel fontconfig-devel libicu-devel sqlite-devel \
-        libpng-devel libjpeg-devel
-
-RUN rpm -Uvh https://rpm.nodesource.com/pub_4.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm
-
-#added fonts
-RUN yum -y install google-*fonts
+        libpng-devel libjpeg-devel  install google-*fonts
 RUN yum -y -q reinstall glibc-common && locale -a
 # Prepare environment
 ENV JAVA_HOME /opt/java
