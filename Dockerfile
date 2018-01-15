@@ -1,4 +1,4 @@
-FROM rightctrl/centos
+FROM rightctrl/centos:7
 MAINTAINER RightCtrl <support@RightCtrl.com>
 
 # Install prepare infrastructure
