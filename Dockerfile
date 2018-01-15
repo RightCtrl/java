@@ -4,10 +4,10 @@ MAINTAINER RightCtrl <AI@RightCtrl.com>
 # Install prepare infrastructure
 RUN yum -y update && \
         yum -y install wget && \
-        yum -y install tar
-RUN yum -y install gcc gcc-c++ make flex bison gperf ruby \
-openssl-devel freetype-devel fontconfig-devel libicu-devel sqlite-devel \
-libpng-devel libjpeg-devel
+        yum -y install tar install gcc gcc-c++ make flex bison gperf ruby \
+        openssl-devel freetype-devel fontconfig-devel libicu-devel sqlite-devel \
+        libpng-devel libjpeg-devel
+
 RUN rpm -Uvh https://rpm.nodesource.com/pub_4.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm
 
 #added fonts
