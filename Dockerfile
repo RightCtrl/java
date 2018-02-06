@@ -4,7 +4,7 @@ MAINTAINER RightCtrl <support@RightCtrl.com>
 # Install prepare infrastructure
 RUN yum -y install wget tar install gcc gcc-c++ make flex bison gperf ruby \
         openssl-devel freetype-devel fontconfig-devel libicu-devel sqlite-devel \
-        libpng-devel libjpeg-devel  install google-*fonts epel-release pwgen
+        libpng-devel libjpeg-devel  install google-*fonts 
 RUN yum -y -q reinstall glibc-common && locale -a
 # Prepare environment
 ENV JAVA_HOME /opt/java
